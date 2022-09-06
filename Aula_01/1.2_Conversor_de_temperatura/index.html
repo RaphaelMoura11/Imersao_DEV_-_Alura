@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </style>
+    <title>Conversor de Temperatura</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Conversor de Temperatura </h1>
+        De
+        <select name="temperaturaEntra" id="tempIn">
+            <option value="Celsius" selected>Celsius</option>
+            <option value="Fareinheit">Fareinheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+        para
+        <select name="temperaturaSai" id="tempOut">
+            <option value="Celsius">Celsius</option>
+            <option value="Fareinheit" selected>Fareinheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select><br>
+
+        <input type="text" id="valor">
+        <button type="submit" onclick="verificar()">Verificar</button><br>
+        <h2 id="valorConvertido"></h2>
+    </div>
+
+</body>
+
+</html>
