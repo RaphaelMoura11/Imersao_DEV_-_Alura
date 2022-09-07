@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    color: #fff;
   }
   
   .container {
@@ -26,6 +27,7 @@ body {
   .page-logo {
     width: 200px;
   }
+
   #listaFilmes img {
     margin: 10px;
     max-height: 250px;
@@ -35,17 +37,8 @@ body {
     border: solid #fff;
   }
 
-  .removeFilme {
-    border: 0;
-    color: #fff;
-    background: #2a15b0;
-    font-weight: bold;
-    padding: 15px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+  .barras {
+    display: flex;
   }
   
   .form-wrapper {
@@ -60,8 +53,6 @@ body {
   
   .form-wrapper button {
     border: 0;
-    color: #fff;
-    background: #da1e26;
     font-weight: bold;
     padding: 15px 20px;
     font-size: 16px;
@@ -73,4 +64,14 @@ body {
   
   .form-wrapper button:hover {
     opacity: 0.8;
+  }
+
+  .adicionaFilme {
+    color: #fff;
+    background: rgb(192, 19, 19);
+  }
+
+  .removeFilme {
+    color: #fff;
+    background: #123cbc;
   }

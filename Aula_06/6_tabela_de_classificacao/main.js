@@ -12,7 +12,7 @@ lu.pontos = calculaPontos(lu)
 var jogadores = [rapha, lu]
 
 function exibirJogadoresTela(jogadores) {
-    var elemento = ""
+    var elemento = "";
     for (var i = 0; i < jogadores.length; i++) {
         elemento += "<tr><td>" + jogadores[i].nome + "</td>"
         elemento += "<td>" + jogadores[i].vitorias + "</td>"
