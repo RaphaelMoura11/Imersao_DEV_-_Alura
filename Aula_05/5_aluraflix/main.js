@@ -21,28 +21,25 @@
     elementoListaFilmes.innerHTML = elementoListaFilmes.innerHTML + elementoEnderecoFilme;
 } */
 
-var dadosFilme = new Array();
-dadosFilme[0] = new Array("Test", "teste")
-console.log(dadosFilme)
+
 
 function adicionarFilme() {
     var nome = document.getElementById("nomeFilme").value;
     var endereco = document.getElementById("endFilme").value;
 
-    dadosFilme.push([nome, endereco])
-    console.log(dadosFilme)
-
-    for (var i = 0; i < dadosFilme.length; i++) {
-        if (dadosFilme[1][2].endsWith(".jpg")) {
-            listarFilmesNaTela(dadosFilme[i][1], dadosFilme[i][2]);
+        if (endereco.endsWith(".jpg")) {
+            exibirFilmes(nome, endereco);
         } else {
             console.error("Endereço de filme invalido");
         }
+        document.getElementById("nomeFilme").value = "";
         document.getElementById("endFilme").value = "";
     }
-}
 
-function listarFilmesNaTela(nomeFilme, endFilme) {
+var fotoFilme = [];
+var nomeFilme = [];
+
+function exibirFilmes(nomeFilme, endFilme) {
     var elementoEnderecoFilme = "<img src=" + endFilme + ">" + nomeFilme;
     var elementoListaFilmes = document.getElementById("listaFilmes");
 
