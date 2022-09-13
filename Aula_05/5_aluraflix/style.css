@@ -36,10 +36,6 @@ body {
   #listaFilmes img:hover{
     border: solid #fff;
   }
-
-  .barras {
-    display: flex;
-  }
   
   .form-wrapper {
     margin: 0 0 15px;
@@ -47,7 +43,7 @@ body {
   
   .form-wrapper input {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto 0px;
     padding: 10px 15px;
   }
   
