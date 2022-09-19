@@ -27,15 +27,6 @@ body {
   .page-logo {
     width: 200px;
   }
-
-  #listaFilmes img {
-    margin: 10px;
-    max-height: 250px;
-  }
-
-  #listaFilmes img:hover{
-    border: solid #fff;
-  }
   
   .form-wrapper {
     margin: 0 0 15px;
@@ -70,4 +61,17 @@ body {
   .removeFilme {
     color: #fff;
     background: #123cbc;
+  }
+
+  #listaFilmes {
+    display: flex;
+    flex-direction: row;
+  }
+  #listaFilmes img {
+    margin: 10px;
+    max-height: 250px;
+  }
+
+  #listaFilmes img:hover{
+    border: solid #fff;
   }
