@@ -14,7 +14,6 @@ function Converter() {
 
     var moeda = document.getElementsByName("moeda")
     for (var i = 0; i < moeda.length; i++)
-
         if (moeda[i].value === "Dolar") {
             var X = "5"
         } else if (moeda[i].value === "Euro") {
