@@ -22,7 +22,7 @@
         <input type="number" id="valor" size="2" /><br>
 
         De
-        <select name="moeda" id="moedasIn">
+        <select name="moedaEntrada" id="moedaIn">
             <option value="Real" >Real</option>
             <option value="Euro">Euro</option>
             <option value="Dolar" selected>Dolar Americano</option>
@@ -30,14 +30,14 @@
         </select>
 
         para
-        <select name="moeda" id="moedasOut">
+        <select name="moedaSaida" id="moedaOut">
             <option value="Real" selected>Real</option>
             <option value="Euro">Euro</option>
             <option value="Dolar">Dolar Americano</option>
             <option value="Bitcoin">Bitcoin</option>
         </select>
 
-        <button type="submit" onclick="Converter()">Converter</button>
+        <button type="submit" onclick="converter()">Converter</button>
         <h2 id="valorConvertido"></h2>
     </div>
 </body>
