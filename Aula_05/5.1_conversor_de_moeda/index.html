@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <title>Aula 02 - Conversor de moedas</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Conversor de moedas
+        </h1>
+        <p class="page-subtitle">
+            Converta valores
+        </p>
+        <label for="moeda">Insira o valor</label><br>
+        <input type="number" id="valor" size="2" /><br>
+
+        De
+        <select name="moeda" id="moedasIn">
+            <option value="Real" >Real</option>
+            <option value="Euro">Euro</option>
+            <option value="Dolar" selected>Dolar Americano</option>
+            <option value="Bitcoin">Bitcoin</option>
+        </select>
+
+        para
+        <select name="moeda" id="moedasOut">
+            <option value="Real" selected>Real</option>
+            <option value="Euro">Euro</option>
+            <option value="Dolar">Dolar Americano</option>
+            <option value="Bitcoin">Bitcoin</option>
+        </select>
+
+        <button type="submit" onclick="Converter()">Converter</button>
+        <h2 id="valorConvertido"></h2>
+    </div>
+</body>
+
+</html>
