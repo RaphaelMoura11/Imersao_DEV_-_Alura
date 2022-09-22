@@ -1,9 +1,19 @@
+// ?Função que passa a instrução referente a moeda de saida
 function converter() {
-
-    convertBitcoin()
+    var moedaDeSaida = document.getElementById("moedaOut").value;
+    
+    if (moedaDeSaida === "Real") {
+        converteReal();
+    } else if (moedaDeSaida === "Dolar") {
+        converteDolar();
+    } else if (moedaDeSaida === "Euro") {
+        converteEuro();
+    } else if (moedaDeSaida === "Bitcoin") {
+        convertBitcoin();
+    }
 }
 
-//Função que converte o valor para Real
+//Função que converte o valor para Real referente a moeda de entrada
 function converteReal() {
     var moedaEntrada = document.getElementById("moedaIn").value;
     var valorElemento = document.getElementById("valor").value;
@@ -24,9 +34,9 @@ function converteReal() {
     var elementoValorConvertido = document.getElementById("valorConvertido")
     var valorConvertido = "O resultado em Real é R$ " + valorEmReal
     elementoValorConvertido.innerHTML = valorConvertido;
-};
+}
 
-//Função que converte o valor para Dolar
+//Função que converte o valor para Dolar referente a moeda de entrada
 function converteDolar() {
     var moedaEntrada = document.getElementById("moedaIn").value;
     var valorElemento = document.getElementById("valor").value;
@@ -49,7 +59,7 @@ function converteDolar() {
     elementoValorConvertido.innerHTML = valorConvertido;
 }
 
-//Função que converte o valor para Euro
+//Função que converte o valor para Euro referente a moeda de entrada
 function converteEuro() {
     var moedaEntrada = document.getElementById("moedaIn").value;
     var valorElemento = document.getElementById("valor").value;
@@ -72,7 +82,7 @@ function converteEuro() {
     elementoValorConvertido.innerHTML = valorConvertido;
 }
 
-//Função que converte o valor para Bitcoin
+//Função que converte o valor para Bitcoin referente a moeda de entrada
 function convertBitcoin() {
     var moedaEntrada = document.getElementById("moedaIn").value;
     var valorElemento = document.getElementById("valor").value;
