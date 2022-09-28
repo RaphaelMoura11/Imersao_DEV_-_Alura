@@ -18,12 +18,12 @@
   }
   
   .page-title {
-    color: #ffffff;
+    color: #fff;
     margin: 0 0 5px;
   }
   
   .page-subtitle {
-    color: #ffffff;
+    color: #fff;
     margin-top: 5px;
   }
   
@@ -32,18 +32,18 @@
   }
 
   table {
-    border: 2px solid white;
+    border: 2px solid #fff;
     border-collapse: collapse;
   }
   
-  h1 {
-    color: white;
+  h1, h3 {
+    color: #fff;
   }
   
   th,
   tr,
   td {
-    border: solid 1px white;
-    color: white;
+    border: solid 1px #fff;
+    color: #fff;
   }
   
