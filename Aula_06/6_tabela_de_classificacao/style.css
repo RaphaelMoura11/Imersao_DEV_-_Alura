@@ -40,6 +40,9 @@
     color: #fff;
   }
   
+  img {
+    height: 50px;
+  }
   th,
   tr,
   td {

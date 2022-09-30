@@ -12,22 +12,33 @@
 <body>
   <h1>Tabela de classificação</h1>
 
-  <h3 id="numPartidas">Numero de partidas:</h3>
-  <table style="width:100%">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Vitórias</th>
-        <th>Empates</th>
-        <th>Derrotas</th>
-        <th>Pontos</th>
-        <th colspan="3">Ações</th>
-      </tr>
-    </thead>
-    <tbody id="tabelaJogadores">
-    </tbody>
-  </table>
+  <div id="button">
+    <button onClick="limparTabela()">
+      Reiniciar 
+    </button>
+  </div>
+
+<h3 id="numPartidas">Numero de partidas:</h3>
+
+<table style="width:100%">
+  <thead>
+    <tr>
+      <th>icone</th>
+      <th>Nome</th>
+      <th>Vitórias</th>
+      <th>Empates</th>
+      <th>Derrotas</th>
+      <th>Pontos</th>
+      <th colspan="3">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody id="tabelaJogadores">
+  </tbody>
+</table>
+
 </body>
+
 
 <script src="main.js"></script>
 
