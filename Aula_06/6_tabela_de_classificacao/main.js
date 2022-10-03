@@ -9,7 +9,7 @@ var jogadores = [{
     pontos: 0
 },
 {
-    imagem: "https://qualificamaisbrasil.com.br/wp-content/uploads/2018/09/icone-check-1.png",
+    imagem: "",
     nome: "Analu",
     vitorias: 0,
     empates: 0,
@@ -27,7 +27,8 @@ jogadores.pontos = calculaPontos(jogadores);
 function exibirJogadoresTela(jogadores) {
     var elemento = "";
     for (var i = 0; i < jogadores.length; i++) {
-        elemento += "<tr><td><img src=" + jogadores[i].imagem + "></td>"
+        //        elemento += "<tr><td><img src=" + jogadores[i].imagem + "></td>"
+        elemento += "<tr><td><input type='file' id='icone' accept='.jpg, .jpeg, .png'></input></td>"
         elemento += "<td>" + jogadores[i].nome + "</td>";
         elemento += "<td>" + jogadores[i].vitorias + "</td>";
         elemento += "<td>" + jogadores[i].empates + "</td>";
@@ -84,4 +85,31 @@ function limparTabela(i) {
     }
     partidas = 0
     exibirJogadoresTela(jogadores);
+};
+
+function adcionaJogador() {
+    var novoJogador = prompt("Nome do jogador");
+
+    if (novoJogador === null) {
+    } else {
+        jogadores.push({
+            imagem: "",
+            nome: novoJogador,
+            vitorias: 0,
+            empates: 0,
+            derrotas: 0,
+            pontos: 0
+        });
+    };
+
+    exibirJogadoresTela(jogadores);
+};
+
+const inputImagem = document.getElementById('icone');
+inputImagem.addEventListener("change", novoIcone);
+
+function novoIcone() {
+    inputImagem.innerHTML = "<td><img src=" + inputImagem + "></img></td>"
+
+    exibirJogadoresTela(jogadores)
 };
