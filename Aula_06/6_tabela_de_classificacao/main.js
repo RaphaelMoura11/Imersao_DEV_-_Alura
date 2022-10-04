@@ -1,21 +1,6 @@
 var partidas = 0;
 
-var jogadores = [{
-    imagem: "https://png.pngtree.com/png-vector/20210212/ourlarge/pngtree-green-correct-icon-png-image_2912233.jpg",
-    nome: "Rapha",
-    vitorias: 0,
-    empates: 0,
-    derrotas: 0,
-    pontos: 0
-},
-{
-    imagem: "",
-    nome: "Analu",
-    vitorias: 0,
-    empates: 0,
-    derrotas: 0,
-    pontos: 0
-}];
+var jogadores = [];
 
 function calculaPontos(jogador) {
     var pontos = (jogador.vitorias * 3) + jogador.empates;
@@ -27,8 +12,7 @@ jogadores.pontos = calculaPontos(jogadores);
 function exibirJogadoresTela(jogadores) {
     var elemento = "";
     for (var i = 0; i < jogadores.length; i++) {
-        //        elemento += "<tr><td><img src=" + jogadores[i].imagem + "></td>"
-        elemento += "<tr><td><input type='file' id='icone' accept='.jpg, .jpeg, .png'></input></td>"
+        elemento += "<tr><td><img src=" + jogadores[i].imagem + "></td>"
         elemento += "<td>" + jogadores[i].nome + "</td>";
         elemento += "<td>" + jogadores[i].vitorias + "</td>";
         elemento += "<td>" + jogadores[i].empates + "</td>";
@@ -88,28 +72,21 @@ function limparTabela(i) {
 };
 
 function adcionaJogador() {
-    var novoJogador = prompt("Nome do jogador");
+    var nomeJogador = prompt("Nome do jogador");
+    var fotoJogador = prompt("link de foto");
 
-    if (novoJogador === null) {
-    } else {
+    if (fotoJogador.endsWith("jpg") || fotoJogador.endsWith("png")) {
         jogadores.push({
-            imagem: "",
-            nome: novoJogador,
+            imagem: fotoJogador,
+            nome: nomeJogador,
             vitorias: 0,
             empates: 0,
             derrotas: 0,
             pontos: 0
         });
+    } else {
+        alert("tipo de foto invalido. Só jpg");
     };
 
     exibirJogadoresTela(jogadores);
-};
-
-const inputImagem = document.getElementById('icone');
-inputImagem.addEventListener("change", novoIcone);
-
-function novoIcone() {
-    inputImagem.innerHTML = "<td><img src=" + inputImagem + "></img></td>"
-
-    exibirJogadoresTela(jogadores)
 };
