@@ -85,7 +85,7 @@ function adcionaJogador() {
             pontos: 0
         });
     } else {
-        alert("tipo de foto invalido. Só jpg");
+        alert("tipo de foto invalido. Só jpg/png");
     };
 
     exibirJogadoresTela(jogadores);

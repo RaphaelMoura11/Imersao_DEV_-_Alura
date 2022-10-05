@@ -62,15 +62,13 @@ function jogar() {
   var atributoSelecionado = obtemAtributoSelecionado();
   var divResultado = document.getElementById("resultado");
 
-  if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]
-  ) {
+  if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
     htmlResultado = "<p class='resultado-final'>Venceu</p>";
-  } else if (
-    cartaJogador.atributos[atributoSelecionado] <
-    cartaMaquina.atributos[atributoSelecionado]
-  ) {
+  } else if (cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
     htmlResultado = "<p class='resultado-final'>Perdeu</p>";
-  } else {
+  } else if (cartaJogador.atributos[atributoSelecionado] == null){
+    alert("selecione um atributo")
+  } else if (cartaJogador.atributos[atributoSelecionado] == cartaMaquina.atributos[atributoSelecionado]){
     htmlResultado = "<p class='resultado-final'>Empatou</p>";
   }
   divResultado.innerHTML = htmlResultado;
