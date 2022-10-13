@@ -103,17 +103,17 @@ var cartaMaquina = 0
 var cartaJogador = 0
 
 function sortearCarta() {
-    var numeroCartaMaquina = parseInt(Math.random() * 3);
+    var qntCartas = cartas.length;
+    var numeroCartaMaquina = parseInt(Math.random() * qntCartas);
     cartaMaquina = cartas[numeroCartaMaquina];
 
-    var numeroCartaJogador = parseInt(Math.random() * 3);
+    var numeroCartaJogador = parseInt(Math.random() * qntCartas);
     while (numeroCartaJogador == numeroCartaMaquina) {
-        numeroCartaJogador = parseInt(Math.random() * 3);
+        numeroCartaJogador = parseInt(Math.random() * qntCartas);
     }
     cartaJogador = cartas[numeroCartaJogador];
-    //console.table(cartaJogador);
-    //console.table(cartaMaquina);
 
+    
     // document.getElementById("btnSortear").disabled = true;
     document.getElementById("btnJogar").disabled = false;
     exibirCartaJogador();
@@ -140,15 +140,13 @@ function jogar() {
         htmlResultado = "<p class='resultado-final'>Venceu</p>";
 
         bauDeCartasJogador.push(cartaMaquina)
-
         console.log(bauDeCartasJogador)
         console.log(cartas)
 
     } else if (cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
         htmlResultado = "<p class='resultado-final'>Perdeu</p>";
 
-        bauDeCartasJogador.push(cartaJogador)
-
+        bauDeCartasMaquina.push(cartaJogador)
         console.log(bauDeCartasJogador)
         console.log(cartas)
 
